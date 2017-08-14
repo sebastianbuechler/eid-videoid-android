@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CustomDemo</string>
+    <string name="videoid_text_starting">INICIANDO /./.</string>
+    <string name="videoid_document_wrongSide">Detectado lado incorrecto</string>
+    <string name="videoid_document_notRecognized">No reconocido</string>
+</resources>
