@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import eu.electronicid.sdk.videoid.config.Environment;
 import eu.electronicid.sdk.videoid.contract.dto.domain.Process;
 import eu.electronicid.sdk.videoid.contract.dto.domain.SimilarityLevel;
@@ -26,13 +29,20 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, VideoActivity.class);
-                intent.putExtra(VideoIDActivity.INTENT_ENVIRONMENT, new Environment("https://etrust-sandbox.electronicid.eu/v2", "---insert_bearer_token---"));
-                intent.putExtra(VideoIDActivity.INTENT_DOCUMENT_TYPE, 62);
-                intent.putExtra(VideoIDActivity.INTENT_MIN_SIMILARITY, SimilarityLevel.Low);
-                intent.putExtra(VideoIDActivity.INTENT_VIDEO_MODE, Process.Unattended);
-                intent.putExtra(VideoIDActivity.INTENT_RAUTHORITY_ID, "---insert_rauthority_id---");
-                startActivityForResult(intent, VIDEOID_REQUEST_CODE);
+                try {
+                    final URL eidEndpoint = new URL("https://etrust-sandbox.electronicid.eu/v2");
+
+                    Intent intent = new Intent(MainActivity.this, VideoActivity.class);
+                    intent.putExtra(VideoIDActivity.INTENT_ENVIRONMENT, new Environment(eidEndpoint, "---insert_bearer_token---"));
+                    intent.putExtra(VideoIDActivity.INTENT_DOCUMENT_TYPE, 62);
+                    intent.putExtra(VideoIDActivity.INTENT_MIN_SIMILARITY, SimilarityLevel.Low);
+                    intent.putExtra(VideoIDActivity.INTENT_VIDEO_MODE, Process.Unattended);
+                    intent.putExtra(VideoIDActivity.INTENT_RAUTHORITY_ID, "---insert_rauthority_id---");
+                    startActivityForResult(intent, VIDEOID_REQUEST_CODE);
+
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }

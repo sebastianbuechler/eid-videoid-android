@@ -22,13 +22,31 @@ public class VideoActivity extends VideoIDActivity {
     }
 
     @Override
-    public void onVideoIDStartingPhase(final Phase phase, final Runnable runnable) {
+    public void onVideoIDPhaseStarting(final Phase phase, final Runnable runnable) {
 
         this.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 new AlertDialog.Builder(VideoActivity.this, R.style.full_screen_dialog).setCancelable(false).setTitle("Phase: " + phase.name())
-                        .setMessage("test message").setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                        .setMessage("phase starting").setNeutralButton("OK", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int id) {
+                        runnable.run();
+                    }
+
+                }).show();
+            }
+        });
+    }
+
+    @Override
+    public void onVideoIDPhaseFinished(final Phase phase, final Runnable runnable) {
+
+        this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                new AlertDialog.Builder(VideoActivity.this, R.style.full_screen_dialog).setCancelable(false).setTitle("Phase: " + phase.name())
+                        .setMessage("phase finished").setNeutralButton("OK", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int id) {
                         runnable.run();
