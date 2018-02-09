@@ -19,7 +19,7 @@
         </activity>
 
         <activity
-            android:name=".VideoActivity"
+            android:name=".CustomVideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/videoid_activity_name"
             android:theme="@style/FullscreenTheme"></activity>

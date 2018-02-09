@@ -18,22 +18,4 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
-    <style name="TickView">
-        <item name="showTick">true</item>
-        <item name="tickColor">#b3fdea16</item>
-        <!--<item name="tickDurationTime">0</item>-->
-    </style>
-
-    <style name="NotificationView">
-        <item name="backgroundWarningColor">#aefd5b16</item>
-    </style>
-
-    <style name="RoiView">
-        <item name="linesColorSuccess">#b3fdea16</item>
-    </style>
-
-    <style name="InterphaseView">
-        <item name="interphaseBackgroundColor">#b3fdea16</item>
-    </style>
-
 </resources>

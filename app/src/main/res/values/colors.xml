@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="roiNotDetectedColor">#411b2e81</color>
+    <color name="roiDetectedColor">#642c811b</color>
+
+    <color name="colorCustomNotification">#64ffffff</color>
+
+    <color name="colorCustomInterphase">#96ffffff</color>
 </resources>
