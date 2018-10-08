@@ -1,6 +1,3 @@
 <resources>
-    <string name="app_name">CustomDemo</string>
-    <string name="videoid_text_starting">STARTING /./.</string>
-    <string name="videoid_document_notRecognized">Not recognized</string>
-    <string name="videoid_document_wrongSide">Wrong side detected</string>
+    <string name="app_name">Custom Demo VideoId</string>
 </resources>
