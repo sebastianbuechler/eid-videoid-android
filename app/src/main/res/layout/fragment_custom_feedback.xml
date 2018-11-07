@@ -9,12 +9,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wait to continue..."
+        android:text="Pulse to continue"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button_captcha"
+        android:id="@+id/button_feedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CONTINUE" />

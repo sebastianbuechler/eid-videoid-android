@@ -18,6 +18,9 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".custom.CustomVideoIdActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
 
     </application>
 

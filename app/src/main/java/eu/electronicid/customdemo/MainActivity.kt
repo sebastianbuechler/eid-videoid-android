@@ -5,9 +5,11 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import eu.electronicid.customdemo.custom.CustomVideoIdActivity
 import eu.electronicid.sdk.video.config.Environment
 import eu.electronicid.sdk.video.ui.VideoActivity
 import eu.electronicid.sdk.videoid.VideoIDActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import java.net.URL
 
 class MainActivity : AppCompatActivity() {
@@ -19,11 +21,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        startActivityForResult(Intent(this, VideoIDActivity::class.java).apply {
-            putExtra(VideoActivity.INTENT_ENVIRONMENT, Environment(endpoint, "ajDQRmBsqYYJy1ygOgrVaBYuZTrVWEMtqolPHGL1PCIbTXx3Y7vOuA7S2yZfTAVZa66szbcff2BP-76ZueoFBTOmB-3b-f6vqzPtsXe9Cx0="))
-            putExtra(VideoActivity.INTENT_LANGUAGE, "es")
-            putExtra(VideoIDActivity.INTENT_DOCUMENT_TYPE, 62)
-        }, REQUEST_CODE)
+        button_start_sample.setOnClickListener {
+            startActivityForResult(Intent(this, CustomVideoIdActivity::class.java).apply {
+                putExtra(VideoActivity.INTENT_ENVIRONMENT, Environment(endpoint, "i5cNAn4T4M-key59JMyIGQ_UgJhXK6bI2qH8qfvI1rR8o0AEKNhfWYaX5Y5_PsFfuzLQow8t-olmeCqj1YmHxYVOpdRTEoJf5pOn7y86G6U="))
+                putExtra(VideoActivity.INTENT_LANGUAGE, "en")
+                putExtra(VideoIDActivity.INTENT_DOCUMENT_TYPE, 62)
+            }, REQUEST_CODE)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
