@@ -17,26 +17,26 @@ class CustomNotification : CustomFragment() {
 
     private val handler = Handler()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(
-                when (notificationType) {
-                    NotificationType.FEEDBACK -> R.layout.fragment_custom_feedback
-                    NotificationType.INPUT -> R.layout.fragment_custom_captcha
-                    NotificationType.VIEW ->
-                        when (phase) {
-                            Phase.FRONT -> R.layout.fragment_custom_front
-                            Phase.BACK -> R.layout.fragment_custom_back
-                            Phase.FACE -> R.layout.fragment_custom_face
-                        }
-                }, container, false)
-    }
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
+            inflater.inflate(
+                    when (notificationType) {
+                        NotificationType.FEEDBACK -> R.layout.fragment_custom_feedback
+                        NotificationType.CAPTCHA -> R.layout.fragment_custom_captcha
+                        NotificationType.VIEW ->
+                            when (phase) {
+                                Phase.FRONT -> R.layout.fragment_custom_front
+                                Phase.BACK -> R.layout.fragment_custom_back
+                                Phase.FACE -> R.layout.fragment_custom_face
+                            }
+                    }, container, false)
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
         when (notificationType) {
             NotificationType.FEEDBACK -> button_feedback.setOnClickListener { finish() }
-            NotificationType.INPUT -> {
+            NotificationType.CAPTCHA -> {
                 edit_text_captcha.inputType = when (inputType) {
                     InputType.TEXT -> android.text.InputType.TYPE_CLASS_TEXT
                     InputType.NUMBER -> android.text.InputType.TYPE_CLASS_NUMBER

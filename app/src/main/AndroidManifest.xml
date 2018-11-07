@@ -22,6 +22,10 @@
             android:name=".custom.CustomVideoIdActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
 
+        <activity
+            android:name=".custom.CustomVideoIdActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
     </application>
 
 </manifest>

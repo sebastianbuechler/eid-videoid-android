@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
     private val REQUEST_CODE = 1
     private val endpoint = URL("https://etrust-sandbox.electronicid.eu/v2/")
 
-    private var isCustomVideoIdActivity = true
+    private enum class TypeCustomView { STYLE, CUSTOM_1, CUSTOM_2 }
+
+    private var typeCustomView = TypeCustomView.STYLE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +28,13 @@ class MainActivity : AppCompatActivity() {
 
         button_start_sample.setOnClickListener {
             startActivityForResult(Intent(this,
-                    if (isCustomVideoIdActivity)
-                        CustomVideoIdActivity::class.java
-                    else
-                        CustomVideoIdActivity2::class.java
+                    when (typeCustomView) {
+                        TypeCustomView.STYLE -> VideoIDActivity::class.java
+                        TypeCustomView.CUSTOM_1 -> CustomVideoIdActivity::class.java
+                        TypeCustomView.CUSTOM_2 -> CustomVideoIdActivity2::class.java
+                    }
             ).apply {
-                putExtra(VideoActivity.INTENT_ENVIRONMENT, Environment(endpoint, "i5cNAn4T4M-key59JMyIGQ_UgJhXK6bI2qH8qfvI1rR8o0AEKNhfWYaX5Y5_PsFfuzLQow8t-olmeCqj1YmHxYVOpdRTEoJf5pOn7y86G6U="))
+                putExtra(VideoActivity.INTENT_ENVIRONMENT, Environment(endpoint, "MoBZ_fDp0IAiCNW7Q_WfpInwTstRlVbmKA51HCwaUP6lF4DqpmaAN0Oi0aiYyKgT04zKTZsgGznLpAfCtqb1CNjPH-0Tyl6oLDP8iEak2Vk="))
                 putExtra(VideoActivity.INTENT_LANGUAGE, "en")
                 putExtra(VideoIDActivity.INTENT_DOCUMENT_TYPE, 62)
             }, REQUEST_CODE)
