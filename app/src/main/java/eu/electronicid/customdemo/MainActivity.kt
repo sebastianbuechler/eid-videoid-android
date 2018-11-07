@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         startActivityForResult(Intent(this, VideoIDActivity::class.java).apply {
-            putExtra(VideoActivity.INTENT_ENVIRONMENT, Environment(endpoint, "{authorization}"))
+            putExtra(VideoActivity.INTENT_ENVIRONMENT, Environment(endpoint, "ajDQRmBsqYYJy1ygOgrVaBYuZTrVWEMtqolPHGL1PCIbTXx3Y7vOuA7S2yZfTAVZa66szbcff2BP-76ZueoFBTOmB-3b-f6vqzPtsXe9Cx0="))
             putExtra(VideoActivity.INTENT_LANGUAGE, "es")
             putExtra(VideoIDActivity.INTENT_DOCUMENT_TYPE, 62)
         }, REQUEST_CODE)
