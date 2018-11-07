@@ -1,7 +1,8 @@
 package eu.electronicid.customdemo.custom.notification
 
 import android.os.Bundle
-import android.text.InputType
+import android.text.InputType.TYPE_CLASS_NUMBER
+import android.text.InputType.TYPE_CLASS_TEXT
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,9 +21,9 @@ class CustomCaptchaNotification : CustomFragment() {
         super.onActivityCreated(savedInstanceState)
 
         edit_text_captcha.inputType = when (inputType) {
-            a.TEXT -> InputType.TYPE_CLASS_TEXT
-            a.NUMBER -> InputType.TYPE_CLASS_NUMBER
-            else -> InputType.TYPE_CLASS_TEXT
+            InputType.TEXT -> TYPE_CLASS_TEXT
+            InputType.NUMBER -> TYPE_CLASS_NUMBER
+            else -> TYPE_CLASS_TEXT
         }
 
         Glide.with(this).load(imageURL).into(image_captcha)

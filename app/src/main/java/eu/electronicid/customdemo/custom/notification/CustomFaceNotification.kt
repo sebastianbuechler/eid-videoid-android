@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import eu.electronicid.customdemo.R
 import eu.electronicid.sdk.video.ui.fragment.CustomFragment
 
-class CustomFrontNotification : CustomFragment() {
+class CustomFaceNotification : CustomFragment() {
 
     private val handler = Handler()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_custom_front, container, false)
+        return inflater.inflate(R.layout.fragment_custom_face, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -29,6 +29,6 @@ class CustomFrontNotification : CustomFragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = CustomFrontNotification()
+        fun newInstance() = CustomFaceNotification()
     }
 }
