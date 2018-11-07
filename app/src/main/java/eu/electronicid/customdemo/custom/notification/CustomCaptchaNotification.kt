@@ -1,4 +1,7 @@
 package eu.electronicid.customdemo.custom.notification
 
-class CustomCaptchaNotification {
+import eu.electronicid.sdk.video.ui.fragment.CustomFragment
+
+class CustomCaptchaNotification : CustomFragment() {
+
 }

@@ -1,4 +1,6 @@
 package eu.electronicid.customdemo.custom.notification
 
-//class CustomFrontNotification : CustomFragment() {
-//}
+import eu.electronicid.sdk.video.ui.fragment.CustomFragment
+
+class CustomFrontNotification : CustomFragment() {
+}
