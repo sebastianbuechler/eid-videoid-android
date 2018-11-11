@@ -14,7 +14,11 @@ class CustomVideoIdActivity : VideoIDActivity() {
 
     override fun getCustomFaceMultimediaNotification(): CustomFragment = CustomFaceNotification.newInstance()
 
+    override fun getCustomHologramMultimediaNotification(): CustomFragment = CustomCaptchaNotification.newInstance()
+
     override fun getCustomCaptchaMultimediaNotification(): CustomFragment = CustomCaptchaNotification.newInstance()
+
+    override fun getCustomAudioCaptchaMultimediaNotification(): CustomFragment = CustomCaptchaNotification.newInstance()
 
     override fun getCustomFeedbackMultimediaNotification(): CustomFragment = CustomFeedbackNotification.newInstance()
 }
