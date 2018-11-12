@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import eu.electronicid.customdemo.R
 import eu.electronicid.sdk.video.contract.control.Phase
 import eu.electronicid.sdk.video.ui.fragment.CustomFragment
+import kotlinx.android.synthetic.main.fragment_custom_audio_captcha.*
 import kotlinx.android.synthetic.main.fragment_custom_captcha.*
 import kotlinx.android.synthetic.main.fragment_custom_feedback.*
 
@@ -20,6 +21,8 @@ class CustomNotification : CustomFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
             inflater.inflate(
                     when (notificationType) {
+                        NotificationType.HOLOGRAM -> R.layout.fragment_custom_hologram
+                        NotificationType.AUDIO_CAPTCHA -> R.layout.fragment_custom_audio_captcha
                         NotificationType.FEEDBACK -> R.layout.fragment_custom_feedback
                         NotificationType.CAPTCHA -> R.layout.fragment_custom_captcha
                         NotificationType.VIEW ->
@@ -36,6 +39,10 @@ class CustomNotification : CustomFragment() {
 
         when (notificationType) {
             NotificationType.FEEDBACK -> button_feedback.setOnClickListener { finish() }
+            NotificationType.AUDIO_CAPTCHA -> {
+                Glide.with(this).load(imageURL).into(image_audio_captcha)
+                button_audio_captcha.setOnClickListener { finish() }
+            }
             NotificationType.CAPTCHA -> {
                 edit_text_captcha.inputType = when (inputType) {
                     InputType.TEXT -> android.text.InputType.TYPE_CLASS_TEXT
@@ -51,6 +58,7 @@ class CustomNotification : CustomFragment() {
                     finish()
                 }
             }
+            NotificationType.HOLOGRAM,
             NotificationType.VIEW ->
                 when (phase) {
                     Phase.FRONT, Phase.BACK, Phase.FACE -> handler.postDelayed({ finish() }, 5000)

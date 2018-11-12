@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private enum class TypeCustomView { STYLE, CUSTOM_1, CUSTOM_2 }
 
-    private var typeCustomView = TypeCustomView.STYLE
+    private var typeCustomView = TypeCustomView.CUSTOM_2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                         TypeCustomView.CUSTOM_2 -> CustomVideoIdActivity2::class.java
                     }
             ).apply {
-                putExtra(VideoActivity.INTENT_ENVIRONMENT, Environment(endpoint, "MoBZ_fDp0IAiCNW7Q_WfpInwTstRlVbmKA51HCwaUP6lF4DqpmaAN0Oi0aiYyKgT04zKTZsgGznLpAfCtqb1CNjPH-0Tyl6oLDP8iEak2Vk="))
+                putExtra(VideoActivity.INTENT_ENVIRONMENT, Environment(endpoint, "S1T14mx3TGGKvTyzBO4gcAChAMHHYdmS1DGSinJczehAGeZTYB64fsC8yu0kwi5r4jBLMBlb_AkXNV4SUZd5wIIkQzqnSKjPJAyhHBwsCxY="))
                 putExtra(VideoActivity.INTENT_LANGUAGE, "en")
                 putExtra(VideoIDActivity.INTENT_DOCUMENT_TYPE, 62)
             }, REQUEST_CODE)
