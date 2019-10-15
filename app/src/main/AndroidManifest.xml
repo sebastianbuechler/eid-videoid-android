@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <!-- uncomment only one SDK (SDK or SDK-LITE) -->
+
+        <!-- ************************************************************* -->
+        <!-- ************************** SDK ****************************** -->
+        <!-- ************************************************************* -->
+        <activity android:name=".sdk.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,12 +24,31 @@
         </activity>
 
         <activity
-            android:name=".custom.CustomVideoIdActivity"
+            android:name="eu.electronicid.customdemo.sdk.custom.CustomVideoIdActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
 
         <activity
-            android:name=".custom.CustomVideoIdActivity2"
+            android:name="eu.electronicid.customdemo.sdk.custom.CustomVideoIdActivity2"
             android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <!-- ************************************************************* -->
+        <!-- ************************** SDK LITE ****************************** -->
+        <!-- ************************************************************* -->
+<!--        <activity android:name=".sdklite.MainActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+<!--        <activity-->
+<!--            android:name="eu.electronicid.customdemo.sdklite.custom.CustomVideoIdActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize" />-->
+
+<!--        <activity-->
+<!--            android:name="eu.electronicid.customdemo.sdklite.custom.CustomVideoIdActivity2"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize" />-->
 
     </application>
 

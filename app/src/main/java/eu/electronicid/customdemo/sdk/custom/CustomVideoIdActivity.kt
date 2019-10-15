@@ -1,8 +1,8 @@
-package eu.electronicid.customdemo.custom
+package eu.electronicid.customdemo.sdk.custom
 
-import eu.electronicid.customdemo.custom.notification.*
-import eu.electronicid.sdk.video.ui.fragment.CustomFragment
+import eu.electronicid.customdemo.sdk.custom.notification.*
 import eu.electronicid.sdk.videoid.VideoIDActivity
+import eu.electronicid.sdklite.video.ui.fragment.CustomFragment
 
 class CustomVideoIdActivity : VideoIDActivity() {
 

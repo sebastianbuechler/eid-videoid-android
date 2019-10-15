@@ -1,4 +1,4 @@
-package eu.electronicid.customdemo.custom.notification
+package eu.electronicid.customdemo.sdk.custom.notification
 
 import android.os.Bundle
 import android.text.InputType.TYPE_CLASS_NUMBER
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import eu.electronicid.customdemo.R
-import eu.electronicid.sdk.video.ui.fragment.CustomFragment
+import eu.electronicid.sdklite.video.ui.fragment.CustomFragment
 import kotlinx.android.synthetic.main.fragment_custom_captcha.*
 
 class CustomCaptchaNotification : CustomFragment() {

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_vertical|center_horizontal"
-    tools:context=".MainActivity">
+    tools:context=".sdk.MainActivity">
 
     <Button
         android:text="Start Sample"

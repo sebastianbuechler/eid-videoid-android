@@ -1,4 +1,4 @@
-package eu.electronicid.customdemo.custom.notification
+package eu.electronicid.customdemo.sdk.custom.notification
 
 import android.os.Bundle
 import android.os.Handler
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import eu.electronicid.customdemo.R
-import eu.electronicid.sdk.video.ui.fragment.CustomFragment
+import eu.electronicid.sdklite.video.ui.fragment.CustomFragment
 
 class CustomBackNotification : CustomFragment() {
 
