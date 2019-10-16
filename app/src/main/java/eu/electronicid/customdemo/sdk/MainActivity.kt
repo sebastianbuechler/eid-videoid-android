@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                         TypeCustomView.CUSTOM_2 -> CustomVideoIdActivity2::class.java
                     }
             ).apply {
-                putExtra(VideoIDActivity.INTENT_ENVIRONMENT, Environment(endpoint, "qVbRbvE-tLhr9zEqKIwN8j3jb6aY4auoqfGw_Mzp9i5yPgE7jBVz4UKbnQEkVhDq59CTSj_L4YQ6cS6ZKOH9YK9S-nOsSqE3DE5h8YJCXo0="))
+                putExtra(VideoIDActivity.INTENT_ENVIRONMENT, Environment(endpoint, "{AUTHORIZATION}"))
                 putExtra(VideoIDActivity.INTENT_LANGUAGE, "en")
                 putExtra(VideoIDActivity.INTENT_DOCUMENT_TYPE, 62)
             }, REQUEST_CODE)
