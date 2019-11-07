@@ -7,7 +7,6 @@
 //import android.view.ViewGroup
 //import com.bumptech.glide.Glide
 //import eu.electronicid.customdemo.R
-//import eu.electronicid.customdemo.sdk.custom.notification.CustomNotification
 //import eu.electronicid.sdklite.video.contract.control.Phase
 //import eu.electronicid.sdklite.video.ui.fragment.CustomFragment
 //import kotlinx.android.synthetic.main.fragment_custom_audio_captcha.*

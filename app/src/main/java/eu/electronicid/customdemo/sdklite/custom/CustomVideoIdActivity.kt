@@ -1,6 +1,6 @@
 //package eu.electronicid.customdemo.sdklite.custom
 //
-//import eu.electronicid.customdemo.sdk.custom.notification.*
+//import eu.electronicid.customdemo.sdklite.custom.notification.*
 //import eu.electronicid.sdklite.video.ui.fragment.CustomFragment
 //import eu.electronicid.sdklite.videoid.VideoIDLiteActivity
 //

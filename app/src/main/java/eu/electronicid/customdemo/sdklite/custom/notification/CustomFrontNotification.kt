@@ -6,7 +6,6 @@
 //import android.view.View
 //import android.view.ViewGroup
 //import eu.electronicid.customdemo.R
-//import eu.electronicid.customdemo.sdk.custom.notification.CustomFrontNotification
 //import eu.electronicid.sdklite.video.ui.fragment.CustomFragment
 //
 //class CustomFrontNotification : CustomFragment() {

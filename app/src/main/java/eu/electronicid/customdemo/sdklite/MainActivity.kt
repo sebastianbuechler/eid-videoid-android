@@ -20,7 +20,7 @@
 //
 //    private enum class TypeCustomView { STYLE, CUSTOM_1, CUSTOM_2 }
 //
-//    private var typeCustomView = TypeCustomView.CUSTOM_2
+//    private var typeCustomView = TypeCustomView.STYLE
 //
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
@@ -34,7 +34,7 @@
 //                        TypeCustomView.CUSTOM_2 -> CustomVideoIdActivity2::class.java
 //                    }
 //            ).apply {
-//                putExtra(VideoIDLiteActivity.INTENT_ENVIRONMENT, Environment(endpoint, "XRoomWBUdBIbSY8KXTHNHG9HUPTTYG6LRZ4yYIYUfUf21ZqRDOgl_UMb89cKC-vISGZ54ATt8LVtmKTjCfZgjpLig4AkMeDkJmp9IKTjbrY="))
+//                putExtra(VideoIDLiteActivity.INTENT_ENVIRONMENT, Environment(endpoint, "{AUTHORIZATION}"))
 //                putExtra(VideoIDLiteActivity.INTENT_LANGUAGE, "en")
 //                putExtra(VideoIDLiteActivity.INTENT_DOCUMENT_TYPE, 62)
 //            }, REQUEST_CODE)

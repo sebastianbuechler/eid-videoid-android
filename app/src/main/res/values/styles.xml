@@ -63,6 +63,9 @@
         <!--<item name="eid_buttonTextFontPath">...</item>-->
         <!--<item name="eid_buttonTextFontFamily">...</item>-->
         <!--<item name="eid_buttonTextFontStyle">...</item>-->
+        <item name="eid_captchaColorCursor">@android:color/holo_green_dark</item>
+        <item name="eid_captchaColorText">@android:color/holo_blue_bright</item>
+        <item name="eid_captchaColorLine">@android:color/holo_orange_dark</item>
     </style>
 
     <style name="FaceDetection">

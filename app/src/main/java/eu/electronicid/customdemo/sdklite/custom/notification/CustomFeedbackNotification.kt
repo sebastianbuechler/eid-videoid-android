@@ -5,7 +5,6 @@
 //import android.view.View
 //import android.view.ViewGroup
 //import eu.electronicid.customdemo.R
-//import eu.electronicid.customdemo.sdk.custom.notification.CustomFeedbackNotification
 //import eu.electronicid.sdklite.video.ui.fragment.CustomFragment
 //import kotlinx.android.synthetic.main.fragment_custom_feedback.*
 //
