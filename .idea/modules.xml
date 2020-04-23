@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eid-videoid-advanced-android.iml" filepath="$PROJECT_DIR$/eid-videoid-advanced-android.iml" group="videoid-advanced-android" />
       <module fileurl="file://$PROJECT_DIR$/videoid-advanced-android.iml" filepath="$PROJECT_DIR$/videoid-advanced-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/videoid-advanced-android-app.iml" filepath="$PROJECT_DIR$/app/videoid-advanced-android-app.iml" group="videoid-advanced-android/app" />
     </modules>
   </component>
 </project>
