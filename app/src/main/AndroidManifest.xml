@@ -28,6 +28,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize" />
 
         <activity
+            android:name="eu.electronicid.customdemo.sdk.custom.CustomVideoIdActivity3"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity
             android:name="eu.electronicid.customdemo.sdk.custom.CustomVideoIdActivity2"
             android:configChanges="orientation|keyboardHidden|screenSize" />
 

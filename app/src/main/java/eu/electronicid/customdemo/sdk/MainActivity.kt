@@ -8,6 +8,7 @@ import android.widget.Toast
 import eu.electronicid.customdemo.R
 import eu.electronicid.customdemo.sdk.custom.CustomVideoIdActivity
 import eu.electronicid.customdemo.sdk.custom.CustomVideoIdActivity2
+import eu.electronicid.customdemo.sdk.custom.CustomVideoIdActivity3
 import eu.electronicid.sdk.videoid.VideoIDActivity
 import eu.electronicid.sdklite.video.config.Environment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,9 +19,9 @@ class MainActivity : AppCompatActivity() {
     private val REQUEST_CODE = 1
     private val endpoint = URL("https://etrust-sandbox.electronicid.eu/v2/")
 
-    private enum class TypeCustomView { STYLE, CUSTOM_1, CUSTOM_2 }
+    private enum class TypeCustomView { STYLE, CUSTOM_1, CUSTOM_2, VIDEO_CONFERENCE }
 
-    private var typeCustomView = TypeCustomView.STYLE
+    private var typeCustomView = TypeCustomView.VIDEO_CONFERENCE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +33,10 @@ class MainActivity : AppCompatActivity() {
                         TypeCustomView.STYLE -> VideoIDActivity::class.java
                         TypeCustomView.CUSTOM_1 -> CustomVideoIdActivity::class.java
                         TypeCustomView.CUSTOM_2 -> CustomVideoIdActivity2::class.java
+                        TypeCustomView.VIDEO_CONFERENCE -> CustomVideoIdActivity3::class.java
                     }
             ).apply {
-                putExtra(VideoIDActivity.INTENT_ENVIRONMENT, Environment(endpoint, "{AUTHORIZATION}"))
+                putExtra(VideoIDActivity.INTENT_ENVIRONMENT, Environment(endpoint, "{AUTH}"))
                 putExtra(VideoIDActivity.INTENT_LANGUAGE, "en")
                 putExtra(VideoIDActivity.INTENT_DOCUMENT_TYPE, 62)
             }, REQUEST_CODE)
