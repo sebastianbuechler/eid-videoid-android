@@ -31,19 +31,20 @@ android {
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
     // uncomment only one SDK (SDK or SDK-LITE)
 
     // ******************************************************
     // *********************** SDK **************************
     // ******************************************************
-    implementation 'eu.electronicid.android:videoid-sdk:6.1.11'
+    implementation 'eu.electronicid.android:videoid-sdk:6.1.12'
 
     // ******************************************************
     // ********************* SDK LITE ***********************
     // ******************************************************
-//    implementation 'eu.electronicid.android:videoid-sdk-lite:6.1.11'
+//    implementation 'eu.electronicid.android:videoid-sdk-lite:6.1.12'
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
