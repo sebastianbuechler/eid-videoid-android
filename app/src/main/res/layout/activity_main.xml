@@ -8,10 +8,10 @@
     tools:context=".sdk.MainActivity">
 
     <Button
-        android:text="Start Sample"
         android:id="@+id/button_start_sample"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Start Sample" />
 
 
 </LinearLayout>

@@ -35,6 +35,10 @@
             android:name="eu.electronicid.customdemo.sdk.custom.CustomVideoIdActivity2"
             android:configChanges="orientation|keyboardHidden|screenSize" />
 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
         <!-- ************************************************************* -->
         <!-- ************************** SDK LITE ****************************** -->
         <!-- ************************************************************* -->
