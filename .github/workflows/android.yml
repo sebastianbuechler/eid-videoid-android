@@ -14,9 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build APK
-        run: ./gradlew assembleRelease
+        run: ./gradlew buildDevDebug
       - name: Upload our APK
         uses: actions/upload-artifact@v2.2.0
         with:
           name: Release artifact
-          path: app/build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/dev/debug/app-dev-debug.apk
